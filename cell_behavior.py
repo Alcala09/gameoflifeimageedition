@@ -56,16 +56,16 @@ class cell_behavior:
         target_choice = target_choice_list[0]
 
         if (target_choice == current_choice+1 or target_choice == current_choice-2): #win
-            print(str(position) + " wins against " + str(chosen_target))
+
             return [chosen_target, position, cell_behavior.get_color_value(board, position)]
             
         
         elif (target_choice == current_choice): #tie
-            print(str(position) + " ties with " + str(chosen_target))
+
             return [position, chosen_target, cell_behavior.get_color_value(board, position)]
 
         else: # lose
-            print(str(position) + " loses against " + str(chosen_target))
+
             return [position, chosen_target, cell_behavior.get_color_value(board, chosen_target)]
     
     def update_board(board):
@@ -84,6 +84,8 @@ class cell_behavior:
     
     def image_to_board(file_name):
         image = Image.open(file_name)
+    
+
 
 
         
